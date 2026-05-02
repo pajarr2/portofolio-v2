@@ -116,7 +116,7 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // // ── Educations ─────────────────────────────────────────────────────────
-        Education::create(
+        $educations = [
             [
                 'institution'    => 'Universitas Siber Asia',
                 'degree'         => 'Sarjana (S1)',
@@ -137,8 +137,11 @@ class DatabaseSeeder extends Seeder
                 'end_date'       => '2023-05-08',
                 'order'          => 2,  
             ]
+        ];
 
-    );
+        foreach ($educations as $education) {
+            Education::create($education);
+        }
 
         // // ── Social Links ───────────────────────────────────────────────────────
         $socials = [
