@@ -128,16 +128,21 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // // ── Social Links ───────────────────────────────────────────────────────
-        // $socials = [
-        //     ['platform' => 'GitHub',    'url' => 'https://github.com', 'icon' => 'github',   'order' => 1],
-        //     ['platform' => 'LinkedIn',  'url' => 'https://linkedin.com','icon' => 'linkedin', 'order' => 2],
-        //     ['platform' => 'Twitter',   'url' => 'https://twitter.com', 'icon' => 'twitter',  'order' => 3],
-        //     ['platform' => 'Instagram', 'url' => 'https://instagram.com','icon' => 'instagram','order' => 4],
-        // ];
+        $socials = [
+            ['platform' => 'GitHub',    'url' => 'https://github.com/pajarr2', 'icon' => 'github',   'order' => 1],
+            ['platform' => 'LinkedIn',  'url' => 'https://www.linkedin.com/in/pajar-09a1a023b/','icon' => 'linkedin', 'order' => 2],
+            // ['platform' => 'Twitter',   'url' => 'https://twitter.com', 'icon' => 'twitter',  'order' => 3],
+            ['platform' => 'Instagram', 'url' => 'https://www.instagram.com/pajarrm._/','icon' => 'instagram','order' => 4],
+        ];
 
-        // foreach ($socials as $social) {
-        //     SocialLink::create($social);
-        // }
+        foreach ($socials as $social) {
+            SocialLink::updateOrCreate(
+                [
+                    'platform' => $social['platform'],
+                ],
+                $social
+            );
+        }
 
         // // ── Projects ───────────────────────────────────────────────────────────
         // $projects = [
