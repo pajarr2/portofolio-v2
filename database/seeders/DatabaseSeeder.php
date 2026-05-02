@@ -116,16 +116,29 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         // // ── Educations ─────────────────────────────────────────────────────────
-        // Education::create([
-        //     'institution'    => 'Institut Teknologi Bandung',
-        //     'degree'         => 'Sarjana (S1)',
-        //     'field_of_study' => 'Teknik Informatika',
-        //     'location'       => 'Bandung, Indonesia',
-        //     'description'    => 'Lulus dengan predikat Cumlaude. Fokus riset pada Machine Learning dan Web Security.',
-        //     'start_date'     => '2015-08-01',
-        //     'end_date'       => '2019-07-31',
-        //     'order'          => 1,
-        // ]);
+        Education::create(
+            [
+                'institution'    => 'Universitas Siber Asia',
+                'degree'         => 'Sarjana (S1)',
+                'field_of_study' => 'Sistem Informasi',
+                'location'       => 'Jakarta Selatan, Indonesia',
+                'description'    => 'Seorang mahasiswa jurusan Sistem Informasi yang sedang menempuh pendidikan di Universitas Siber Asia.',
+                'start_date'     => '2025-01-12',
+                'end_date'       => null,
+                'order'          => 1,
+            ],
+            [
+                'institution'    => 'SMKS Wikrama Bogor',
+                'degree'         => 'Teknologi Informasi',
+                'field_of_study' => 'Rekayasa Perangkat Lunak',
+                'location'       => 'Bogor, Indonesia',
+                'description'    => 'Lulus dengan predikat baik, Fokus pada pengembangan web dan aplikasi mobile.',
+                'start_date'     => '2020-07-01',
+                'end_date'       => '2023-05-08',
+                'order'          => 2,  
+            ]
+
+    );
 
         // // ── Social Links ───────────────────────────────────────────────────────
         $socials = [
